@@ -12,8 +12,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve the static website files
-app.use(express.static(path.join(__dirname)));
+// Serve the static website files from public/
+app.use(express.static(path.join(__dirname, 'public')));
 
 // ─── In-Memory Store (replace with DB in production) ─────────────────────────
 const submissions = [];
