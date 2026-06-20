@@ -12,15 +12,10 @@
   /* ── Brand Colors (from Brand Guideline) ─────────────────────────────── */
   /* Prestige Blue */
   --navy:       #0A2C47;
-  --navy-deep:  #071e30;
-  --navy-mid:   #0d3558;
   /* Poised Gold */
   --gold:       #C9A14A;
-  --gold-light: #d4b36a;
-  --gold-pale:  #e8d5a8;
   /* Etiquette Ivory */
   --ivory:      #F4F1EB;
-  --ivory-warm: #ede8df;
   /* Legacy Wine */
   --wine:       #6B2E3C;
   /* Elegant Suede */
@@ -29,14 +24,10 @@
   --sage:       #718B69;
   /* Refined Slate */
   --slate:      #494947;
-  --slate-light:#6b6b69;
-  --white:      #ffffff;
 
   /* ── Typography ──────────────────────────────────────────────────────── */
   --font-display: 'Playfair Display', serif;
   --font-ui:      'Poppins', system-ui, sans-serif;
-  /* Supporting text color — Refined Slate */
-  --refined-slate: #494947;
 
   /* ── Spacing ──────────────────────────────────────────────────────────── */
   --space-xs:  0.5rem;
@@ -83,7 +74,7 @@ input, textarea, select { font: inherit; }
   margin-bottom: 0.75rem;
   display: block;
 }
-.eyebrow-light { color: var(--gold-light); }
+.eyebrow-light { color: var(--gold); }
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(2.4rem, 4vw, 3.8rem);
@@ -93,7 +84,7 @@ input, textarea, select { font: inherit; }
 }
 .section-title em { font-style: italic; color: var(--gold); }
 .section-title-light { color: var(--ivory); }
-.section-title-light em { color: var(--gold-light); }
+.section-title-light em { color: var(--gold); }
 
 /* ── Buttons ─────────────────────────────────────────────────────────────────  */
 .btn {
@@ -123,13 +114,13 @@ input, textarea, select { font: inherit; }
 
 .btn-gold {
   background-color: var(--gold);
-  color: var(--navy-deep);
+  color: var(--navy);
   border-color: var(--gold);
 }
 @media (hover: hover) and (pointer: fine) {
   .btn-gold:hover {
-    background-color: var(--gold-light);
-    border-color: var(--gold-light);
+    background-color: var(--gold);
+    border-color: var(--gold);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(201, 161, 74, 0.35);
   }
@@ -228,7 +219,7 @@ input, textarea, select { font: inherit; }
   .nav-cta:hover {
     background-color: var(--gold);
     border-color: var(--gold);
-    color: var(--navy-deep);
+    color: var(--navy);
   }
 }
 .nav-hamburger {
@@ -437,7 +428,7 @@ input, textarea, select { font: inherit; }
 }
 .hero-headline em {
   font-style: italic;
-  color: var(--gold-light);
+  color: var(--gold);
 }
 .hero-subtext {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
@@ -525,7 +516,7 @@ input, textarea, select { font: inherit; }
 }
 
 /* ═══════════════════════════════════════════ PHILOSOPHY ═══════════════════ */
-.philosophy { background-color: var(--white); }
+.philosophy { background-color: var(--ivory); }
 .philosophy-inner {
   width: min(92%, 1280px);
   margin-inline: auto;
@@ -593,7 +584,7 @@ input, textarea, select { font: inherit; }
 
 /* ═══════════════════════════════════════════ TRANSFORMATION ═══════════════ */
 .transformation {
-  background-color: var(--ivory-warm);
+  background-color: var(--ivory);
 }
 .transform-header {
   text-align: center;
@@ -606,14 +597,14 @@ input, textarea, select { font: inherit; }
   align-items: start;
 }
 .transform-col {
-  background: var(--white);
+  background: var(--ivory);
   padding: var(--space-lg);
 }
 .transform-col-label {
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--slate-light);
+  color: var(--slate);
   margin-bottom: var(--space-md);
   font-weight: 600;
 }
@@ -643,7 +634,7 @@ input, textarea, select { font: inherit; }
 }
 .t-icon-no {
   background-color: rgba(84, 84, 84, 0.1);
-  color: var(--slate-light);
+  color: var(--slate);
 }
 .t-icon-yes {
   background-color: rgba(123, 155, 118, 0.2);
@@ -664,9 +655,9 @@ input, textarea, select { font: inherit; }
 /* ═══════════════════════════════════════════ SERVICES ════════════════════ */
 .services { background-color: var(--navy); }
 .services .section-head { margin-bottom: var(--space-xl); }
-.services .eyebrow { color: var(--gold-light); }
+.services .eyebrow { color: var(--gold); }
 .services .section-title { color: var(--ivory); }
-.services .section-title em { color: var(--gold-light); }
+.services .section-title em { color: var(--gold); }
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -733,7 +724,7 @@ input, textarea, select { font: inherit; }
 }
 .service-card-body p {
   font-size: 0.9rem;
-  color: var(--refined-slate);
+  color: var(--slate);
   line-height: 1.6;
   opacity: 0;
   transform: translateY(10px);
@@ -767,11 +758,11 @@ input, textarea, select { font: inherit; }
     color var(--t-fast) ease;
 }
 @media (hover: hover) and (pointer: fine) {
-  .service-link:hover { gap: 0.75rem; color: var(--gold-light); }
+  .service-link:hover { gap: 0.75rem; color: var(--gold); }
 }
 
 /* ═══════════════════════════════════════════ JOURNEY ═════════════════════ */
-.journey { background-color: var(--white); }
+.journey { background-color: var(--ivory); }
 .journey-head { margin-bottom: var(--space-xl); }
 .journey-steps {
   display: grid;
@@ -875,7 +866,7 @@ input, textarea, select { font: inherit; }
 }
 .testimonial-footer { display: flex; flex-direction: column; gap: 0.3rem; }
 .testimonial-name { font-weight: 600; font-size: 1rem; color: var(--navy); }
-.testimonial-role { font-size: 0.82rem; color: var(--slate-light); letter-spacing: 0.04em; }
+.testimonial-role { font-size: 0.82rem; color: var(--slate); letter-spacing: 0.04em; }
 .testimonial-controls {
   display: flex;
   justify-content: center;
@@ -918,7 +909,7 @@ input, textarea, select { font: inherit; }
 .gi-3 { grid-row: span 2; }
 
 /* ═══════════════════════════════════════════ FAQ ════════════════════════ */
-.faq { background-color: var(--white); }
+.faq { background-color: var(--ivory); }
 .faq-container { width: min(90%, 760px); margin-inline: auto; }
 .faq-head { margin-bottom: var(--space-xl); }
 .accordion { border-top: 1px solid rgba(10, 44, 71, 0.1); }
@@ -1019,7 +1010,7 @@ input, textarea, select { font: inherit; }
 }
 /* Form */
 .contact-form-wrap {
-  background-color: var(--white);
+  background-color: var(--ivory);
   padding: var(--space-lg);
 }
 .form-title {
@@ -1050,7 +1041,7 @@ input, textarea, select { font: inherit; }
   top: 0.9rem;
   left: 0;
   font-size: 0.95rem;
-  color: var(--slate-light);
+  color: var(--slate);
   pointer-events: none;
   transition:
     top var(--t-fast) var(--ease-out),
@@ -1107,7 +1098,7 @@ input, textarea, select { font: inherit; }
   top: 100%;
   left: 0;
   right: 0;
-  background-color: var(--white);
+  background-color: var(--ivory);
   border: 1px solid rgba(10, 44, 71, 0.1);
   border-top: none;
   box-shadow: 0 10px 30px rgba(10, 44, 71, 0.1);
@@ -1137,7 +1128,7 @@ input, textarea, select { font: inherit; }
 }
 .custom-option.selected {
   background-color: var(--gold);
-  color: var(--navy-deep);
+  color: var(--navy);
 }
 .field-label-select.active {
   top: 0;
@@ -1161,7 +1152,7 @@ input, textarea, select { font: inherit; }
 .form-status.error   { color: #b94a4a; }
 
 /* ═══════════════════════════════════════════ NEWSLETTER ═════════════════ */
-.newsletter { background-color: var(--ivory-warm); }
+.newsletter { background-color: var(--ivory); }
 .newsletter-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1174,7 +1165,7 @@ input, textarea, select { font: inherit; }
   display: flex;
   gap: var(--space-sm);
   align-items: flex-end;
-  background: var(--white);
+  background: var(--ivory);
   padding: var(--space-sm);
   border: 1px solid rgba(10, 44, 71, 0.1);
 }
@@ -1185,7 +1176,7 @@ input, textarea, select { font: inherit; }
 .nl-field .field-input:not(:placeholder-shown) ~ .field-label { top: -0.6rem; }
 .nl-note {
   font-size: 0.75rem;
-  color: var(--slate-light);
+  color: var(--slate);
   letter-spacing: 0.02em;
   margin: 0 !important;
   padding: 0 !important;
@@ -1194,7 +1185,7 @@ input, textarea, select { font: inherit; }
 /* ═══════════════════════════════════════════ FOOTER ══════════════════════ */
 .footer {
   background-color: var(--navy);
-  color: var(--refined-slate);
+  color: var(--slate);
 }
 .footer-inner {
   width: min(92%, 1280px);
