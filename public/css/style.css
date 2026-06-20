@@ -834,11 +834,17 @@ input, textarea, select { font: inherit; }
   z-index: 2;
 }
 .testimonial-portrait {
-  aspect-ratio: 3/4;
   overflow: hidden;
-  border-radius: 50%;
   max-width: 240px;
   aspect-ratio: 1 / 1;
+  -webkit-mask-image: url('../assets/Logomark%20mask.svg');
+  mask-image: url('../assets/Logomark%20mask.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 .testimonial-portrait img {
   width: 100%;
