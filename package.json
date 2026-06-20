@@ -2,10 +2,8 @@
   "name": "perfect-finish-website",
   "version": "1.0.0",
   "description": "Perfect Finish School of Etiquette — Official Website",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node local-dev.js"
   },
   "keywords": [],
   "author": "Perfect Finish School of Etiquette",
