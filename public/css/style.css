@@ -9,26 +9,34 @@
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
 
-  /* ── Brand Colors (from OG image) ─────────────────────────────────────── */
+  /* ── Brand Colors (from Brand Guideline) ─────────────────────────────── */
+  /* Prestige Blue */
   --navy:       #0A2C47;
   --navy-deep:  #071e30;
   --navy-mid:   #0d3558;
+  /* Poised Gold */
   --gold:       #C9A14A;
-  --gold-light: #dbb96a;
-  --gold-pale:  #f0e0b8;
+  --gold-light: #d4b36a;
+  --gold-pale:  #e8d5a8;
+  /* Etiquette Ivory */
   --ivory:      #F4F1EB;
   --ivory-warm: #ede8df;
-  --suede:      #C4AA93;
-  --sage:       #7B9B76;
-  --slate:      #545454;
-  --slate-light:#7a7a7a;
+  /* Legacy Wine */
+  --wine:       #6B2E3C;
+  /* Elegant Suede */
+  --suede:      #B19D82;
+  /* Graceful Sage */
+  --sage:       #718B69;
+  /* Refined Slate */
+  --slate:      #494947;
+  --slate-light:#6b6b69;
   --white:      #ffffff;
 
   /* ── Typography ──────────────────────────────────────────────────────── */
   --font-display: 'Playfair Display', serif;
   --font-ui:      'Poppins', system-ui, sans-serif;
-  /* Supporting text color */
-  --refined-slate: #4A4A48;
+  /* Supporting text color — Refined Slate */
+  --refined-slate: #494947;
 
   /* ── Spacing ──────────────────────────────────────────────────────────── */
   --space-xs:  0.5rem;
