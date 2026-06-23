@@ -183,7 +183,10 @@ input, textarea, select { font: inherit; }
   transition: filter var(--t-mid) var(--ease-out);
 }
 /* Make logo visible on dark hero */
-.navbar:not(.scrolled) .nav-logo img { filter: brightness(10); }
+.navbar:not(.scrolled) .nav-logo img { 
+  /* Ivory filter for #F4F1EB */
+  filter: brightness(0) saturate(100%) invert(98%) sepia(3%) saturate(1005%) hue-rotate(320deg) brightness(103%) contrast(93%); 
+}
 .nav-links {
   display: flex;
   align-items: center;
@@ -873,7 +876,7 @@ input, textarea, select { font: inherit; }
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 280px;
+  grid-template-rows: 280px 280px;
   gap: 2px;
 }
 .gallery-item { overflow: hidden; }
@@ -885,6 +888,8 @@ input, textarea, select { font: inherit; }
 @media (hover: hover) and (pointer: fine) {
   .gallery-item:hover img { transform: scale(1.05); }
 }
+.gi-1 { grid-column: span 2; grid-row: span 2; }
+.gi-3 { grid-row: span 2; }
 
 /* ═══════════════════════════════════════════ FAQ ════════════════════════ */
 .faq { background-color: var(--ivory); }
@@ -1293,8 +1298,8 @@ input, textarea, select { font: inherit; }
   .services-grid { grid-template-columns: 1fr; }
   .transform-grid { grid-template-columns: 1fr; }
   .transform-divider { display: none; }
-  .testimonial-card { grid-template-columns: 1fr; gap: var(--space-md); }
-  .testimonial-portrait { max-width: 220px; margin: 0 auto; }
+  .testimonial-card { grid-template-columns: 1fr; }
+  .testimonial-portrait { max-width: 280px; margin: 0 auto; }
   .testimonial-body {
     border-left: none;
     border-top: 1px solid rgba(201, 161, 74, 0.3);
@@ -1302,6 +1307,7 @@ input, textarea, select { font: inherit; }
     margin: 0;
   }
   .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .gi-1, .gi-3 { grid-column: span 1; grid-row: span 1; }
   .gallery-item { aspect-ratio: 1; }
   .stats-inner { gap: var(--space-sm); }
   .stat-divider { display: none; }
@@ -1384,11 +1390,6 @@ input, textarea, select { font: inherit; }
   .service-card { aspect-ratio: 3/2; }
   .service-card-body { padding: var(--space-md); }
   .service-card-body h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-  .service-card-body p {
-    max-height: 4rem;
-    opacity: 1;
-    transform: translateY(0);
-  }
 
   /* Journey */
   .journey-steps { grid-template-columns: 1fr; gap: var(--space-md); }
@@ -1408,7 +1409,7 @@ input, textarea, select { font: inherit; }
     padding: 0;
   }
   .testimonial-portrait {
-    max-width: 180px;
+    max-width: 280px;
     margin: 0 auto;
   }
   .testimonial-body {
@@ -1430,6 +1431,7 @@ input, textarea, select { font: inherit; }
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
+  .gi-1, .gi-3 { grid-column: span 1; grid-row: span 1; }
   .gallery-item { aspect-ratio: 1; }
 
   /* FAQ */
@@ -1493,17 +1495,8 @@ input, textarea, select { font: inherit; }
   }
 
   .hero-headline { font-size: clamp(2rem, 8.5vw, 2.8rem); }
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    gap: 0.75rem;
-  }
-  .hero-actions .btn {
-    width: 100%;
-    max-width: 100%;
-    justify-content: center;
-  }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .hero-actions .btn { width: 100%; max-width: 280px; }
 
   .stats-inner { grid-template-columns: 1fr 1fr; }
 
@@ -1517,8 +1510,9 @@ input, textarea, select { font: inherit; }
 
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-item { aspect-ratio: 16/9; }
+  .gi-1, .gi-2, .gi-3, .gi-4 { grid-column: span 1; grid-row: span 1; }
 
-  .testimonial-portrait { max-width: 150px; }
+  .testimonial-portrait { max-width: 280px; }
   .testimonial-body blockquote { font-size: 1rem; }
   .testimonial-quote-mark { font-size: 3rem; }
 
