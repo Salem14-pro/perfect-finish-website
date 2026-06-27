@@ -233,6 +233,9 @@ input, textarea, select { font: inherit; background-color: var(--ivory); }
     border-color: var(--gold);
     color: var(--navy);
   }
+  .navbar.scrolled .nav-cta:hover {
+    border-color: var(--gold);
+  }
 }
 .nav-hamburger {
   display: none;
@@ -471,7 +474,7 @@ input, textarea, select { font: inherit; background-color: var(--ivory); }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-xl);
-  align-items: start;
+  align-items: center;
 }
 .philosophy-left { padding-right: var(--space-md); }
 .philosophy-pillars {
@@ -498,7 +501,7 @@ input, textarea, select { font: inherit; background-color: var(--ivory); }
   flex-shrink: 0;
 }
 .philosophy-card {
-  background-color: var(--suede);
+  background-color: var(--navy);
   padding: var(--space-lg);
   position: relative;
 }
@@ -513,7 +516,7 @@ input, textarea, select { font: inherit; background-color: var(--ivory); }
 .philosophy-body {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: var(--slate);
+  color: var(--ivory);
   margin-bottom: var(--space-md);
 }
 .philosophy-card-rule {
@@ -526,13 +529,13 @@ input, textarea, select { font: inherit; background-color: var(--ivory); }
   font-family: var(--font-display);
   font-size: 1.35rem;
   font-style: italic;
-  color: var(--navy);
+  color: rgba(244, 241, 235, 0.6);
   line-height: 1.4;
 }
 
 /* ═══════════════════════════════════════════ TRANSFORMATION ═══════════════ */
 .transformation {
-  background-color: var(--ivory);
+  background-color: #EFEBE4;
   position: relative;
   overflow: hidden;
 }
@@ -712,7 +715,7 @@ input, textarea, select { font: inherit; background-color: var(--ivory); }
 }
 .service-card-body p {
   font-size: 0.9rem;
-  color: var(--slate);
+  color: var(--ivory);
   line-height: 1.6;
   opacity: 0;
   transform: translateY(10px);
@@ -957,7 +960,7 @@ input, textarea, select { font: inherit; background-color: var(--ivory); }
 }
 .contact-desc {
   font-size: 1.05rem;
-  color: rgba(244, 241, 235, 0.75);
+  color: var(--ivory);
   line-height: 1.8;
   margin-block: var(--space-lg);
 }
@@ -972,7 +975,7 @@ input, textarea, select { font: inherit; background-color: var(--ivory); }
   align-items: center;
   gap: 0.75rem;
   font-size: 0.95rem;
-  color: rgba(244, 241, 235, 0.8);
+  color: var(--ivory);
 }
 .perk-check {
   color: var(--gold);
@@ -1150,6 +1153,7 @@ input, textarea, select { font: inherit; background-color: var(--ivory); }
   gap: var(--space-xl);
   align-items: center;
 }
+.newsletter .eyebrow { color: var(--gold); }
 .newsletter-text p { font-size: 1rem; color: var(--slate); margin-top: var(--space-sm); }
 .newsletter-form { display: flex; flex-direction: column; gap: var(--space-sm); }
 .nl-field-row {
