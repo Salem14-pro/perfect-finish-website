@@ -54,7 +54,18 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
-img { display: block; max-width: 100%; height: auto; }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+/* Re-enable pointer events only for linked/interactive images */
+a img, button img, .nav-logo img { pointer-events: auto; }
 ul  { list-style: none; }
 a   { text-decoration: none; color: inherit; }
 button { cursor: pointer; border: none; background: none; font: inherit; }
@@ -1469,7 +1480,19 @@ input, textarea, select { font: inherit; background-color: var(--ivory); }
     grid-template-columns: 1fr;
     gap: var(--space-md);
   }
-  .nl-field-row { flex-direction: column; gap: 0; }
+  .nl-field-row {
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+  }
+  .nl-field { width: 100%; }
+  .nl-field .field-input { width: 100%; }
+  #nl-submit-btn {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+    min-width: unset;
+  }
   .newsletter-text p { font-size: 0.92rem; }
 
   /* Footer */

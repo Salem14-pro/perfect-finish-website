@@ -423,10 +423,38 @@ qsa('a[href^="#"]').forEach(anchor => {
 });
 
 /* ══════════════════════════════════════════════════════════════════════════
-   10. HERO PARALLAX — (Removed as hero image was removed)
+   10. ASSET PROTECTION
+   Layered approach: blocks right-click, drag, long-press, and selection
+   on all media elements. Not unbreakable, but removes the most common
+   casual theft vectors (drag-to-tab, right-click-save, long-press-save).
    ══════════════════════════════════════════════════════════════════════════ */
 
-// Global right‑click protection – disables context menu for the entire page
+// Block context menu (right-click) on the entire page
 document.addEventListener('contextmenu', e => {
   e.preventDefault();
+});
+
+// Block drag-start on all images and videos (prevents drag-to-new-tab)
+document.addEventListener('dragstart', e => {
+  if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO') {
+    e.preventDefault();
+  }
+}, false);
+
+// Apply draggable="false" to all images after DOM is ready
+qsa('img').forEach(img => {
+  img.setAttribute('draggable', 'false');
+});
+
+// Block long-press "save image" on iOS/Android (touchstart + prevent default on img)
+qsa('img, video').forEach(el => {
+  el.addEventListener('touchstart', e => { e.preventDefault(); }, { passive: false });
+  el.addEventListener('touchend',   e => { e.preventDefault(); }, { passive: false });
+});
+
+// Block keyboard-based selection copying
+document.addEventListener('selectstart', e => {
+  if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO') {
+    e.preventDefault();
+  }
 });
